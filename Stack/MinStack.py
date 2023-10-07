@@ -31,6 +31,8 @@ minStack = MinStack()
 minStack.push(-2)
 minStack.push(0)
 minStack.push(-3)
+print(minStack.stack)
+print(minStack.min_stack)
 
 # Get the minimum value and print it
 print(minStack.getMin())
@@ -43,3 +45,5 @@ print(minStack.top())
 
 # Get the minimum value again and print it
 print(minStack.getMin())
+print(minStack.stack)
+print(minStack.min_stack)
