@@ -1,4 +1,4 @@
-from collections import deque
+
 
 class Solution:
     def firstUniqChar(self, s: str) -> int:
@@ -6,7 +6,7 @@ class Solution:
         char_count = {}
     
         # Initialize a queue to keep track of the order of characters
-        char_queue = deque()
+        char_queue = []
     
         # Iterate through the string to count characters and build the queue
         for char in s:
@@ -15,7 +15,7 @@ class Solution:
     
         # Iterate through the queue to find the first non-repeating character
         while char_queue:
-            char = char_queue.popleft()
+            char = char_queue.pop(0)
             if char_count[char] == 1:
                 return s.index(char)
     
