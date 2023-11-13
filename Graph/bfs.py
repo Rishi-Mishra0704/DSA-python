@@ -1,7 +1,7 @@
 class Graph:
     def __init__(self):
         self.vertices = {}
-
+    # u = start vertex, v = end vertex
     def add_edge(self, u, v):
         if u not in self.vertices:
             self.vertices[u] = []
