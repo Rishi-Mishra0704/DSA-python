@@ -11,20 +11,20 @@ class Graph:
         self.vertices[u].append(v)
         self.vertices[v].append(u)
 
-def dfs_traversal(graph, start_vertex, visited=None):
+def dfs_traversal(graph, u, visited=None):
     if visited is None:
         visited = set()
 
-    visited.add(start_vertex)
-    print(start_vertex, end=" ")
+    visited.add(u)
+    print(u, end=" ")
 
-    for neighbor in graph.get(start_vertex, []):
+    for neighbor in graph.get(u, []):
         if neighbor not in visited:
             dfs_traversal(graph, neighbor, visited)
 
-def bfs_traversal(graph, start_vertex):
+def bfs_traversal(graph, u):
     visited = set()
-    queue = [start_vertex]
+    queue = [u]
 
     while queue:
         current_vertex = queue.pop(0)
